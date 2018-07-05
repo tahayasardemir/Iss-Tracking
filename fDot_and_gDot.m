@@ -1,11 +1,11 @@
-function [fdot, gdot] = fDot_and_gDot(x, r, ro, alfa)
+function [fdot, gdot] = fDot_and_gDot(x, r, ro, alpha)
 % ˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜
 %
 % This function calculates the time derivatives of the
 % Lagrange f and g coefficients.
 %
 % mu - the gravitational parameter (kmˆ3/sˆ2)
-% alfa - reciprocal of the semimajor axis (1/km)
+% alpha - reciprocal of the semimajor axis (1/km)
 % ro - the radial position at time t (km)
 % t - the time elapsed since initial state vector (s)
 % r - the radial position after time t (km)
@@ -16,7 +16,7 @@ function [fdot, gdot] = fDot_and_gDot(x, r, ro, alfa)
 
 % ------------------------------------------------------------
 global mu
-z = alfa*x^2;
+z = alpha*x^2;
 %...Equation 3.66c:
 fdot = sqrt(mu)/r/ro*(z*stumpS(z) - 1)*x;
 %...Equation 3.66d:
