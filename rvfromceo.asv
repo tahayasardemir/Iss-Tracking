@@ -1,5 +1,5 @@
 % Algorithm for converting keplerian elements to cartesian coordinates %
-function [r,v] = rvfromceo (h,e,RA,incl,w,TA)
+function [r,v] = rv_from_ceo (h,e,RA,incl,w,TA)
 global mu
 format long
 mu= 398600; % standart gravitional parameter 
