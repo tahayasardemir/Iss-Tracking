@@ -16,8 +16,6 @@ function x = kepler_U(dt, ro, vro, alfa)
 % S - value of Stumpff function S(z)
 % n - number of iterations for convergence
 % nMax - maximum allowable number of iterations
-%
-% User M-functions required: stumpC, stumpS
 % ------------------------------------------------------------
 global mu
 %...Set an error tolerance and a limit on the number of
