@@ -1,4 +1,4 @@
-function [R,V] = rv_from_r0v0(R0, V0, t)
+function [R,V] = rv_from_r0v0(R0,V0,t)
 % ˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜
 % This function computes the state vector (R,V) from the
 % initial state vector (R0,V0) and the elapsed time.
