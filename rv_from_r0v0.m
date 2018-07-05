@@ -22,12 +22,12 @@ x = kepler_U(t, r0, vr0, alpha);
 %...Compute the f and g functions:
 [f, g] = f_and_g(x, t, r0, alpha);
 %...Compute the final position vector:
-R = f*R0 + g*V0;
+R = f*R0 + g*V0
 %...Compute the magnitude of R:
 r = norm(R);
 %...Compute the derivatives of f and g:
 [fdot, gdot] = fDot_and_gDot(x, r, r0, alpha);
 %...Compute the final velocity:
-V = fdot*R0 + gdot*V0;
+V = fdot*R0 + gdot*V0
 % ˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜
 end

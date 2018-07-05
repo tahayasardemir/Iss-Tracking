@@ -2,17 +2,7 @@
 function [r,v] = rvfromceo (h,e,RA,incl,w,TA)
 global mu
 format long
-mu= 398600; % standart gravitional parameter 
-% convert all the data from degree to rad
-Me = 204.2868*(pi/180); % Mean anomaly from TLE data (rad)
-n = 15.54 ; % from TLE data (rev/day)
-a = semimajor(n); % calculate semimajor axis in km
-e = 0.0003435; % from TLE data
-h = angularmomentum(a,e); % calculating angular momentum 
-RA = 295.8524*(pi/180); % from TLE data (rad)
-incl = 51.6414*(pi/180); % from TLE data(rad)
-w = 262.6267*(pi/180); % from TLE data (rad)
-TA = trueanomaly(e,Me); 
+
 % coe - orbital elements [h e RA incl w TA] in radian
 coe=[h e RA incl w TA] %necessary values are taken from satellite TLE data 
 %...Equations 4.37 and 4.38 (rp and vp are column vectors):
