@@ -11,7 +11,7 @@ function x = kepler_U(dt, ro, vro, alfa)
 % ro - radial position (km) when x = 0
 % vro - radial velocity (km/s) when x = 0
 % alfa - reciprocal of the semimajor axis (1/km)
-% z - auxiliary variable (z = a*xˆ2)
+% z - auxiliary variable (z = alfa*xˆ2)
 % C - value of Stumpff function C(z)
 % S - value of Stumpff function S(z)
 % n - number of iterations for convergence
