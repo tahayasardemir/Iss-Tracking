@@ -1,7 +1,7 @@
 % Returns observer's position vector in ECI
-function observervector()
+function [x_o,y_o,z_o] = observer_vector(time)
 % Date:
-currenttime=clock; %returns current time as a (1,6) matrix
+currenttime=time; %returns current time as a (1,6) matrix
 year = currenttime(1);
 month = currenttime(2);
 day = currenttime(3);

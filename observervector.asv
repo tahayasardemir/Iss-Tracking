@@ -1,7 +1,7 @@
 % Returns observer's position vector in ECI
-function observervector()
+function [x_o,y_o,z_o] = observervector(time)
 % Date:
-currenttime=clock; %returns current time as a (1,6) matrix
+currenttime=time; %returns current time as a (1,6) matrix
 year = currenttime(1);
 month = currenttime(2);
 day = currenttime(3);
@@ -10,8 +10,8 @@ hour = currenttime(4)-3;
 minute = currenttime(5);
 second = currenttime(6);
 
-% Express the longitude and latitude of the observer as decimal numbers:
-EL = 32.8 % 
+% Express the longitude of the observer as decimal numbers:
+EL = 32.8 % lonitude of Gazi teknopark
 WL = 360 - EL;
 
 ut = hour + minute/60 + second/3600; % Express universal time as a decimal number:
