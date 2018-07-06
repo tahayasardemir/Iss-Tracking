@@ -1,12 +1,13 @@
 % Returns observer's position vector in ECI
-function [x_o,y_o,z_o] = observervector(time)
+function [x_o,y_o,z_o,lst] = observervector(time)
+global mu n a EL NL 
 % Date:
 currenttime=time; %returns current time as a (1,6) matrix
 year = currenttime(1);
 month = currenttime(2);
 day = currenttime(3);
 % Universal time:
-hour = currenttime(4)-3; 
+hour = currenttime(4)-3; % convert local(computer) time to UTC
 minute = currenttime(5);
 second = currenttime(6);
 
@@ -16,7 +17,7 @@ WL = 360 - EL;
 
 ut = hour + minute/60 + second/3600; % Express universal time as a decimal number:
 lst = LST(year, month, day, ut, EL); % Get local sidereal time
-NL = 39.8 % Observer's north latitude 
+
 
 R_e = 6378.135 % Radius of earth in km
 z_o = (R_e)*sin(NL); % k component of observer's position vector
