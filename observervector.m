@@ -13,7 +13,7 @@ second = currenttime(6);
 
 % Express the longitude of the observer as decimal numbers:
 EL = 32.8 % lonitude of Gazi teknopark
-WL = 360 - EL;
+WL = 360 - EL; % west longitude
 
 ut = hour + minute/60 + second/3600; % Express universal time as a decimal number:
 lst = LST(year, month, day, ut, EL); % Get local sidereal time
