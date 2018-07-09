@@ -7,3 +7,4 @@ c = (cosh(sqrt(-z)) - 1)/(-z);
 else
 c = 1/2;
 end
+end
