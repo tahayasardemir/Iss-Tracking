@@ -1,4 +1,3 @@
-function test_1()
 a=arduino('COM4');
 servoAttach(a,4);
 servoAttach(a,5);
@@ -16,7 +15,6 @@ servoWrite(a,4,Az);
 servoWrite(a,5,Az); 
 servoWrite(a,6,El);    
 servoWrite(a,7,El);
-end
  
 
      
