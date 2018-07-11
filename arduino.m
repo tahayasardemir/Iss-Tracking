@@ -77,7 +77,7 @@ classdef arduino < handle
                 % open port
                 try
                     fopen(a.aser);
-                catch ME,
+                catch ME ,
                     disp(ME.message)
                     delete(a);
                     error(['Could not open port: ' comPort]);
@@ -85,7 +85,7 @@ classdef arduino < handle
                 
                 % it takes several seconds before any operation could be attempted
                 fprintf(1,'Attempting connection .');
-                for i=1:12,
+                for i=1:12 ,
                     pause(1);
                     fprintf(1,'.');
                 end
