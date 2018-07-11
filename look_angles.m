@@ -35,9 +35,7 @@ r_z = cos(NL*rad)*cos(lst*rad)*r_x...
     + sin(NL*rad)*r_z;
 r = sqrt((r_s^2)+(r_e^2)+(r_z^2)); % The range to the satellite in km 
 % the look angles 
-El = asin(r_z/r)*dgr+1 % Elevation in degrees
-Az = atan(-r_e/r_s)*dgr+1  % Azimuth in degrees
-
-
+El = asin(r_z/r)*dgr % Elevation in degrees
+Az = atan(-r_e/r_s)*dgr % Azimuth in degrees
 
 end
