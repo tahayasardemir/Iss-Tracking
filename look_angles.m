@@ -1,7 +1,6 @@
-function [Az,El] = look_angles(time)
+function [Az,El]=look_angles(time)
 global mu n a EL NL 
 format long e
-
 EL = 32.8; % lonitude of Gazi teknopark
 NL = 39.8;% latitude of Gazi teknopark
 rad = pi/180;

@@ -7,3 +7,4 @@ s = (sinh(sqrt(-z)) - sqrt(-z))/(sqrt(-z))^3;
 else
 s = 1/6;
 end
+end

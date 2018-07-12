@@ -1,10 +1,11 @@
-function main()
+function [Az,El] = look_angles(time)
 global mu n a EL NL 
+format long e
+
 EL = 32.8; % lonitude of Gazi teknopark
 NL = 39.8;% latitude of Gazi teknopark
 rad = pi/180;
 dgr = 180/pi;
-time=clock;
 [x_o,y_o,z_o,lst] = observervector(time) % Get observer vector and local sidereal time
 
 [R,V] = satellite_position(time)
@@ -32,8 +33,8 @@ r_e = -sin(lst*rad)*r_x + cos(lst*rad)*r_y;
 r_z = cos(NL*rad)*cos(lst*rad)*r_x...
     + cos(NL*rad)*sin(lst*rad)*r_y...
     + sin(NL*rad)*r_z;
-r = sqrt((r_s^2)+(r_e^2)+(r_z^2)); % The range to the satellite
+r = sqrt((r_s^2)+(r_e^2)+(r_z^2)); % The range to the satellite in km 
 % the look angles 
-El = asin(r_z/r)*dgr % Elevation
-Az = atan(-r_e/r_s)*dgr % Azimuth 
+El = asin(r_z/r)*dgr % Elevation in degrees
+Az = atan(-r_e/r_s)*dgr % Azimuth in degrees
 end
