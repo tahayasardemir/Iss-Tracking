@@ -1,6 +1,7 @@
 function [Az,El] = look_angles(time)
 global mu n a EL NL 
 format long e
+time=clock
 
 EL = 32.8; % lonitude of Gazi teknopark
 NL = 39.8;% latitude of Gazi teknopark

@@ -3,7 +3,7 @@ function [r,v] = rvfromceo (h,e,RA,incl,w,TA)
 global mu a n
 format long
 % coe - orbital elements [h e RA incl w TA] in radian
-coe = [h e RA incl w TA] %necessary values are taken from satellite TLE data 
+ceo = [h e RA incl w TA]; %necessary values are taken from satellite TLE data 
 %...Equations 4.37 and 4.38 (rp and vp are column vectors):
 rp = (h^2/mu) * (1/(1 + e*cos(TA))) * (cos(TA)*[1;0;0] ...
 + sin(TA)*[0;1;0]);

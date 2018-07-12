@@ -7,7 +7,7 @@ year = currenttime(1);
 month = currenttime(2);
 day = currenttime(3);
 % Universal time:
-hour = currenttime(4)-3; % convert local(computer) time to UTC
+hour = currenttime(4)-1; % convert local(computer) time to UTC
 minute = currenttime(5);
 second = currenttime(6);
 
